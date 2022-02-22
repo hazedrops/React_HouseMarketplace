@@ -11,7 +11,11 @@ body {
   font-family: 'Montserrat', sans-serif;
   background-color: #f2f4f8;
   margin: 0;
-  box-sizing: border-box;
+  box-sizing: border-box;   
+}
+
+main {
+  min-height: 100vh;
 }
 
 a {
@@ -83,6 +87,11 @@ button {
   position: absolute;
   top: -3.4%;
   right: 20px;
+}
+
+.pageContainer {
+  /* max-height: calc(100vh - 85px); */
+  height: auto;
 }
 
 .pageContainer,
@@ -264,7 +273,7 @@ button {
 }
 
 .socialLogin {
-  margin-top: 4rem;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -289,7 +298,7 @@ button {
 }
 
 .registerLink {
-  margin-top: 4rem;
+  margin-top: 2rem;
   color: #00cc66;
   font-weight: 600;
   text-align: center;
