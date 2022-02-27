@@ -32,7 +32,23 @@ function Listing() {
   }, [navigate, params.listingId])
 
   return (
-    <div>Listing</div>
+    <main>
+      {/* Slider */}
+      <div className="shareIconDiv" onClick={() => {
+        // Sets the clipboard's contents to the current window url
+        navigator.clipboard.writeText(window.location.href)
+        
+        setShareLinkCopied(true)
+
+        setTimeout(() => {
+          setShareLinkCopied(false)
+        }, 2000)
+      }}>
+        <img src={shareIcon} alt="" />
+      </div>
+
+      {shareLinkCopied && <p className='linkCopied'>Link Copied!</p>}
+    </main>
   )
 }
 
