@@ -93,17 +93,21 @@ function Profile() {
   }
 
   const onDelete = async (listingId) => {
-    if(window.confirm('Are you sure you want to delete?')) {
+    if (window.confirm('Are you sure you want to delete?')) {
       // Delete listing from Firebase
       await deleteDoc(doc(db, 'listings', listingId))
 
       // Delete listing from the UI
-      const updatedListings = listings.filter((listing) => listing.id !== listingId)
+      const updatedListings = listings.filter(
+        (listing) => listing.id !== listingId
+      )
       setListings(updatedListings)
 
       toast.success('Liting deleted successfully')
     }
   }
+
+  const onEdit = (listingId) => navigate(`/edit-listing/${listingId}`) 
 
   return (
     <div className='profile'>
@@ -160,7 +164,13 @@ function Profile() {
             <p className='listingText'>Your Listings</p>
             <ul className='listingsList'>
               {listings.map((listing) => (
-                <ListingItem key={listing.id} listing={listing.data} id={listing.id} onDelete={() => onDelete(listing.id)}/>
+                <ListingItem
+                  key={listing.id}
+                  listing={listing.data}
+                  id={listing.id}
+                  onEdit={() => onEdit(listing.id)}
+                  onDelete={() => onDelete(listing.id)}
+                />
               ))}
             </ul>
           </>

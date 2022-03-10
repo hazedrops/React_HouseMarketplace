@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
 import {
   collection,
   getDocs,
@@ -18,8 +17,6 @@ function Offers() {
   const [listings, setListings] = useState(null)
   const [loading, setLoading] = useState(true)
   const [lastFetchedListing, setLastFetchedListing] = useState(null)
-
-  const params = useParams()
 
   useEffect(() => {
     const fetchListings = async () => {
@@ -82,7 +79,6 @@ function Offers() {
       // Get the last listing on the docs
       const lastVisible = querySnap.docs[querySnap.docs.length - 1]
       setLastFetchedListing(lastVisible)
-      console.log('lastVisible in function: ', lastVisible)
 
       const listings = []
 
