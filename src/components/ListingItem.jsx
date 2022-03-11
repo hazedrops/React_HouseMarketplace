@@ -50,7 +50,11 @@ function ListingItem({ listing, id, onEdit, onDelete }) {
 
       {onEdit && (
         <div className='listingIcons'>
-          <EditIcon className='editicon' onClick={() => onEdit(id)} />
+          <EditIcon
+            className='editicon'
+            fill='#3b2c2c'
+            onClick={() => onEdit(id)}
+          />
         </div>
       )}
 
@@ -58,7 +62,8 @@ function ListingItem({ listing, id, onEdit, onDelete }) {
         <div className='listingIcons'>
           <DeleteIcon
             className='removeIcon'
-            fill='rgb(231, 76, 60)'
+            // fill='rgb(231, 76, 60)'
+            fill='#ef4e14'
             onClick={() => onDelete(listing.id, listing.name)}
           />
         </div>
