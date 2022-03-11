@@ -55,7 +55,7 @@ function Listing() {
               <div
                 style={{
                   background: `url(${listing.imgUrls[index]}) center no-repeat`,
-                  backgroundSize: 'cover'
+                  backgroundSize: 'cover',
                 }}
                 className='swiperSlideDiv'
               ></div>
@@ -90,6 +90,7 @@ function Listing() {
             : listing.regularPrice
                 .toString()
                 .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+          {listing.type === 'rent' && ' / Month'}
         </p>
         <p className='listingLocation'>{listing.location}</p>
         <p className='listingType'>
