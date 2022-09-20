@@ -1,13 +1,22 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper'
+import {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  Autoplay,
+  EffectFade,
+} from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
 import 'swiper/css/a11y'
+import 'swiper/css/autoplay'
+import 'swiper/css/effect-fade'
 import { getDoc, doc } from 'firebase/firestore'
 import { getAuth } from 'firebase/auth'
 import { db } from '../firebase.config'
@@ -45,9 +54,18 @@ function Listing() {
     <main>
       <Swiper
         // install Swiper modules
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        modules={[
+          Navigation,
+          Pagination,
+          Scrollbar,
+          A11y,
+          Autoplay,
+          EffectFade,
+        ]}
         slidesPerView={1}
         pagination={{ clickable: true }}
+        autoplay={{ delay: 3000 }}
+        effect='fade'
       >
         {listing.imgUrls &&
           listing.imgUrls.map((url, index) => (

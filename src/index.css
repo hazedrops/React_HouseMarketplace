@@ -12,10 +12,19 @@ body {
   background-color: #f2f4f8;
   margin: 0;
   box-sizing: border-box;
+  height: 100vh;
+}
+
+header {
+  max-width: 80vw;
+  margin: 2rem auto;
 }
 
 main {
   min-height: 100vh;
+  width: 100%;  
+  max-width: 80vw;
+  margin: 2rem auto;
 }
 
 a {
@@ -96,11 +105,13 @@ button {
 }
 
 .pageContainer {
-  /* max-height: calc(100vh - 85px); */
+  max-height: calc(100vh - 85px);
+  max-width: 80vw;
+  /* margin: 2rem auto; */
   height: auto;
 }
 
-.pageContainer,
+/* .pageContainer, */
 .offers,
 .profile,
 .listingDetails,
@@ -109,13 +120,16 @@ button {
   margin: 1rem;
 }
 @media (min-width: 1024px) {
-  .pageContainer,
   .offers,
   .profile,
   .listingDetails,
   .category,
   .explore {
     margin: 3rem;
+  }
+
+  .pageContainer {
+    margin: 3rem auto;
   }
 }
 
@@ -151,7 +165,7 @@ button {
 
 .pageHeader {
   font-size: 2rem;
-  font-weight: 800;
+  font-weight: 800;  
 }
 
 .navbar {
@@ -344,6 +358,7 @@ button {
   position: relative;
   width: 100%;
   height: 30vh;
+  border-radius: 1.5rem;
   /* height: 100%; */
 }
 
