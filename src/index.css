@@ -93,15 +93,10 @@ button {
 
 .removeIcon {
   cursor: pointer;
-  /*position: absolute;
-  top: 5%;
-  right: 5%; */
 }
 
 .editIcon {
   cursor: pointer;
-  /* position: absolute;
-  right: 5%; */
 }
 
 .pageContainer {
@@ -109,7 +104,6 @@ button {
   max-width: 80vw;
 }
 
-/* .pageContainer, */
 .offers,
 .profile,
 .listingDetails,
@@ -323,12 +317,6 @@ button {
   margin-bottom: 10rem;
 }
 
-/* .registerLink.extraMargin {
-  background: pink;
-  z-index: 100000;
-  margin-bottom: 10rem;
-} */
-
 @media (min-width: 1217px) {
   .explore {
     margin-bottom: 10rem;
@@ -363,7 +351,6 @@ button {
   width: 100%;
   height: 30vh;
   border-radius: 1.5rem;
-  /* height: 100%; */
 }
 
 .swiperSlideImg {
@@ -432,7 +419,6 @@ button {
 }
 
 .categoryListing {
-  /* background-color: yellow; */
   max-width: 80%;
   padding: 0 2em 0 0;
 }
