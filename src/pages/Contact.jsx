@@ -27,6 +27,13 @@ function Contact() {
   }, [params.landlordId])
 
   const onChange = (e) => setMessage(e.target.value)
+  
+  const onClick =  (e) => {
+    if(!message) {
+      toast.error("Please enter your message to send.")
+      e.preventDefault();
+    }
+  }
 
   return (
     <div className='pageContainer'>
@@ -52,13 +59,13 @@ function Contact() {
                 onChange={onChange}
               ></textarea>
             </div>
-
+            
             <a
               href={`mailto:${landlord.email}?Subject=${searchParams.get(
                 'listingName'
               )}&body=${message}`}
             >
-              <button type='button' className='primaryButton'>
+              <button type='button' className='primaryButton' onClick={onClick}>
                 Send Message
               </button>
             </a>

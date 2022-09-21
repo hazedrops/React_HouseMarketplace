@@ -12,7 +12,7 @@ body {
   background-color: #f2f4f8;
   margin: 0;
   box-sizing: border-box;
-  height: 100vh;
+  height: 100%;
 }
 
 header {
@@ -105,10 +105,8 @@ button {
 }
 
 .pageContainer {
-  max-height: calc(100vh - 85px);
+  height: calc(100% - 85px);
   max-width: 80vw;
-  /* margin: 2rem auto; */
-  height: auto;
 }
 
 /* .pageContainer, */
@@ -322,8 +320,14 @@ button {
   color: #f78600;
   font-weight: 600;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 10rem;
 }
+
+/* .registerLink.extraMargin {
+  background: pink;
+  z-index: 100000;
+  margin-bottom: 10rem;
+} */
 
 @media (min-width: 1217px) {
   .explore {
