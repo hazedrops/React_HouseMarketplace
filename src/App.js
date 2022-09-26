@@ -19,7 +19,7 @@ import 'react-toastify/dist/ReactToastify.css'
 function App() {
   return (
     <>
-      <Router>
+      <Router basename='/yoonjeongchoi/projects/HouseMarketplaceReact'>
         <Routes>
           <Route path='/' element={<Explore />} />
           <Route path='/offers' element={<Offers />} />
@@ -32,9 +32,11 @@ function App() {
           <Route path='/forgot-password' element={<ForgotPassword />} />
           <Route path='/create-listing' element={<CreateListing />} />
           <Route path='/edit-listing/:listingId' element={<EditListing />} />
-          <Route path='/category/:categoryName/:listingId' element={<Listing />} />
+          <Route
+            path='/category/:categoryName/:listingId'
+            element={<Listing />}
+          />
           <Route path='/contact/:landlordId' element={<Contact />} />
-
         </Routes>
 
         <Navbar />

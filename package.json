@@ -1,5 +1,6 @@
 {
   "name": "react-house-marketplace",
+  "homepage": "http://ezpuzzles.com/yoonjeongchoi/projects/HouseMarketplaceReact",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
